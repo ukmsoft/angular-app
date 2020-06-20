@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Abc Limited</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto"></ul>
+        <button class="btn btn-outline-success my-2 my-sm-0" (click)="onLogout()">Logout</button>
+    </div>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 border-right">
+            <ul class="list-unstyled" *ngFor="let item of items">
+                <li><a routerLink="/items/{{item.itemId}}">{{item.itemLabel}}</a></li>
+            </ul>
+        </div>
+        <div class="col-md-9">
+            <form>
+                <!-- Content projection -->
+                <ng-content></ng-content>
+                
+            </form>
+        </div>
+    </div>
+</div>

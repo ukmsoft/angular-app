@@ -1,0 +1,18 @@
+<div class="login">
+    <form class="form-signin" [formGroup]="loginForm">
+
+        <div class="form-label-group">
+            <label for="inputUsername">Username</label>
+            <input type="text" id="inputUsername" formControlName="username" class="form-control" placeholder="Username"
+                required autofocus>
+        </div>
+
+        <div class="form-label-group pb-3">
+            <label for="inputPassword">Password</label>
+            <input type="password" id="inputPassword" formControlName="password" class="form-control"
+                placeholder="Password" required>
+        </div>
+
+        <button class="btn btn-lg btn-block btn-outline-dark" (click)="onLogin()">Login</button>
+    </form>
+</div>

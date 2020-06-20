@@ -1,0 +1,22 @@
+<app-home>
+    <!-- Content to project -->
+    <form [formGroup]="itemBeanForm">
+        <div class="container row">
+            <div class="col-md-3" *ngFor="let field of fieldsArray; let i=index">
+                <label>Label {{ i+1 }}</label>
+                <input type="text" id="input_{{i+1}}" formControlName="input_{{i+1}}" />
+            </div>
+        </div>
+        <div class="container">
+            <hr>
+            <div class="row float-right">
+                <div class="col-xs-6 pr-2">
+                    <button class="btn btn-md btn-block btn-outline-dark" (click)="onReset()">Reset</button>
+                </div>
+                <div class="col-xs-6 pr-2">
+                    <button class="btn btn-md btn-block btn-outline-dark" (click)="onSubmit()">Submit</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</app-home>
